@@ -4,8 +4,14 @@ export const Navbar = () => {
     <ul>
         <li>
             <a href="/band">Band</a>
+        </li>
+        <li>
             <a href="/tour">Tour</a>
+        </li>
+        <li>
             <a href="/gallery">Gallery</a>
+        </li>
+        <li>
             <a href="/contact">Contact</a>
         </li>
     </ul>
