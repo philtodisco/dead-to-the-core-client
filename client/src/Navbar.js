@@ -1,19 +1,13 @@
+import { Link } from "react-router-dom"
+
 export const Navbar = () => {
   return <nav className="nav">
-    <a href="/" className="site-title">Dead To The Core</a>
+    <Link to ="/" className="site-title">Dead To The Core</Link>
     <ul>
-        <li>
-            <a href="/band">Band</a>
-        </li>
-        <li>
-            <a href="/tour">Tour</a>
-        </li>
-        <li>
-            <a href="/gallery">Gallery</a>
-        </li>
-        <li>
-            <a href="/contact">Contact</a>
-        </li>
+            <Link to ="/band">Band</Link>
+            <Link to ="/tour">Tour</Link>
+            <Link to ="/gallery">Gallery</Link>
+            <Link to ="/contact">Contact</Link>
     </ul>
     </nav>
 }
