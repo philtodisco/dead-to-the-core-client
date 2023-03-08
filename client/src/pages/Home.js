@@ -1,3 +1,8 @@
 export default function Home() {
-  return <h1>Home</h1>
+  return <div class="hero-image">
+  <div class="hero-text">
+    <img class="logo" src="https://i.imgur.com/shKmshK.jpg" alt="Italian Trulli"></img>
+  </div>
+</div>
 }
+
