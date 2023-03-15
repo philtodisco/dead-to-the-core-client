@@ -5,7 +5,8 @@ body {
     position: relative;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
-    color: aliceblue;
+    background-color: aliceblue; 
+    color: #070707;
   }
 
 * {
@@ -15,16 +16,17 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
-    background-color: #070707;
-    height: 5rem;
+    align-items: center;
+    height: 10rem;
 }
 
 .site-title {
     display: flex;
-    align-self: center;
-    font-size: 2rem;
-    font-weight: 300;
     margin-left: 5rem;
+}
+
+#logo {
+    max-width: 7rem;
 }
 
 .nav-links {
@@ -41,24 +43,6 @@ body {
 .nav-links > a:hover {
     opacity: 50%;
 }
-
-.hero-image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/images/hero-image.png");
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.hero-text {
-    text-align: center;
-    margin-bottom: 15rem;
-    color: aliceblue;
-  }
 
   a {
     text-decoration: none;
