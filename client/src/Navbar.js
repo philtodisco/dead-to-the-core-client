@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom"
-import Logo from "./images/dttc-logo.png"
 
 export const Navbar = () => {
   return <nav className="nav">
-    <Link to ="/" className="site-title"> 
-      <img id="logo" src={Logo}
-      alt="rock concert"/>
-    </Link>
+    <div className="title-container">
+    <Link to ="/" className="site-title">Dead To The Core</Link>
+    <p id="title-sub">Boston based Grateful Dead Tribute</p>
+    </div>
     <ul className="nav-links">
             <Link to ="/band">Band</Link>
             <Link to ="/tour">Tour</Link>
