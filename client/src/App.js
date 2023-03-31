@@ -6,7 +6,7 @@ import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import { Navbar } from './Navbar'
 import { Route, Routes } from "react-router-dom"
-import { Footer } from './Footer'
+// import { Footer } from './Footer'
 
 export default function App() {
   return (
@@ -19,7 +19,7 @@ export default function App() {
       <Route path = "/gallery" element = {<Gallery />} />
       <Route path = "/contact" element = {<Contact />} />
     </Routes>
-  <Footer />
+  {/* <Footer /> */}
   </>
   )
 }
