@@ -4,9 +4,13 @@ import axios from 'axios'
 export default function Band() {
   const getAllTourDates = () => {
     // testing using randomuser api
-    axios.get('https://randomuser.me/api/')
+    axios.get('https://dttc-api.herokuapp.com/tourDates', {
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    })
     .then(res => {
-      console.log(res.data.results[0])
+      console.log(res.data)
     }).catch(err => {
       console.log(err)
     })
