@@ -1,12 +1,16 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+const apiKey = process.env.API_KEY
 
 const TourDateTable = () => {
   const [tourDateData, setTourDateData] = useState([])
 
   useEffect(() => {
     axios.get('https://dttc-api.herokuapp.com/tourDates', {
-      headers: { 'Access-Control-Allow-Origin': '*' }
+      headers: { 
+        'Access-Control-Allow-Origin': '*',
+        'Authorization': `Bearer ${apiKey}`
+    }
     })
     .then(res => {
       setTourDateData(res.data)
