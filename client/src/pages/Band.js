@@ -9,7 +9,7 @@ const TourDateTable = () => {
     axios.get('https://dttc-api.herokuapp.com/tourDates', {
       headers: { 
         'Access-Control-Allow-Origin': '*',
-        'Authorization': `Bearer ${apiKey}`
+        'x-api-key': apiKey
     }
     })
     .then(res => {
