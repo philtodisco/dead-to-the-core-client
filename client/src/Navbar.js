@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-// import { useState } from "react";
+import { useState } from "react";
 
 // export const Navbar = () => {
 //   const [expanded, setExpanded] = useState(false)
@@ -38,17 +38,18 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export const Navbar = () => {
 	const navRef = useRef();
+  const [showLink, setShowLink] = useState(false)
 
 	const showNavbar = () => {
-		navRef.current.classList.toggle(
-			"responsive_nav"
-		);
+		navRef.current.classList.toggle("responsive_nav");
+    setShowLink(!showLink)
 	};
 
 	return (
 		<header>
 			<Link to ="/" className="site-title">Dead To The Core</Link>
 			<nav className="nav" ref={navRef}>
+        {showLink && <Link to ="/">Home</Link>}
         <Link to ="/band">Band</Link>
         <Link to ="/tour">Tour</Link>
         <Link to ="/gallery">Gallery</Link>
@@ -67,3 +68,5 @@ export const Navbar = () => {
 		</header>
 	);
 }
+
+
