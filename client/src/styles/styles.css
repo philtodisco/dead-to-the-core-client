@@ -190,7 +190,6 @@ a {
     font-weight: 700;
     font-style: normal;
     background-color: var(--mainColor);
-    overflow: hidden;
 }
 
 :root {
