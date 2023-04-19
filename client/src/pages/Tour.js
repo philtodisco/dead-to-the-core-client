@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 const apiKey = process.env.API_KEY
 
 const TourDateTable = () => {
@@ -47,8 +47,12 @@ const TourDateTable = () => {
 export default function Tour() {
   // Use TourDateTable component
   return (
+    <React.Fragment>
+    
     <div className='table-container'>
+      <h1 className='page-title'>TOUR DATES</h1>
       <TourDateTable />
     </div>
+    </React.Fragment>
   )
 }
