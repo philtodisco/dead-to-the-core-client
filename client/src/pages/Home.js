@@ -1,6 +1,7 @@
 import Hero from "../images/hero-image.png"
 import { Link } from "react-router-dom"
 
+
 export default function Home() {
   return <div className="home-page">
     <img id="hero-image" src={Hero} alt="grateful dead logo" img/>

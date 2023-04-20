@@ -48,7 +48,6 @@ export default function Tour() {
   // Use TourDateTable component
   return (
     <React.Fragment>
-    
     <div className='table-container'>
       <h1 className='page-title'>TOUR DATES</h1>
       <TourDateTable />
