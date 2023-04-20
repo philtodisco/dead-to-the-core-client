@@ -21,24 +21,29 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      </label>
-      <label>
-        Email:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </label>
-      <label>
-        Subject:
-        <input type="text" value={subject} onChange={(e) => setSubject(e.target.value)} />
-      </label>
-      <label>
+    <div className='contact-page'>
+      <div className='form-container'>
+      <form onSubmit={handleSubmit}>
+        <h2>Interested in booking us?</h2>
+        <label>
+         Name:
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        </label>
+        <label>
+         Email:
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </label>
+        <label>
+          Subject:
+          <input type="text" value={subject} onChange={(e) => setSubject(e.target.value)} />
+        </label>
+        <label>
         Message:
-        <input value={message} onChange={(e) => setMessage(e.target.value)} />
+        <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
       </label>
-      <button type="submit">Submit</button>
-    </form>
+        <button id='submit-btn' type="submit">Submit</button>
+      </form>
+      </div>
+    </div>
   );
 }

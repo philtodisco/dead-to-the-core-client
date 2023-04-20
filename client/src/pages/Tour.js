@@ -16,7 +16,7 @@ const TourDateTable = () => {
       // Format the date field of each tour date object
       const formattedTourDates = res.data.map(tourDate => {
         const date = new Date(tourDate.date);
-        const formattedDate = date.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+        const formattedDate = date.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })
         return {
           ...tourDate,
           date: formattedDate
