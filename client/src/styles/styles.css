@@ -9,7 +9,7 @@
 }
 
 :root {
-	--mainColor: #abe7f0;
+	--mainColor: #EEEDEB;
 	--mainColorLight: #5767aa;
 	--secondaryColor: #A83F32;
 	--textColor: #131617;
@@ -314,7 +314,38 @@ nav {
     opacity: 50%;
   }
 
-  /* gallery */
+  /* band */
+
+  .band-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+  }
+
+  .band-page-text-container {
+    width: 50rem;
+    margin-right: 5rem;
+  }
+
+  .band-page-text-container > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .band-page-text-container > p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: right;
+  }
+
+  #band-photo-1 {
+    max-width: 50rem;
+    width: 50vw;
+  }
+
+
 
   
 

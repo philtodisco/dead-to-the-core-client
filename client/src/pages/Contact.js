@@ -35,19 +35,19 @@ export default function ContactForm() {
         <h2>{emailSent ? 'Your email has been sent!' : 'Interested in booking us?'}</h2>
         <label>
          Name:
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required/>
         </label>
         <label>
          Email:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
         </label>
         <label>
           Subject:
-          <input type="text" value={subject} onChange={(e) => setSubject(e.target.value)} />
+          <input type="text" value={subject} onChange={(e) => setSubject(e.target.value)} required/>
         </label>
         <label>
         Message:
-        <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
+        <textarea value={message} onChange={(e) => setMessage(e.target.value)} required/>
       </label>
         <button id='submit-btn' type="submit">Submit</button>
       </form>
