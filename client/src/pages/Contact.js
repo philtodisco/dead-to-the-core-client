@@ -7,13 +7,21 @@ export default function ContactForm() {
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
+  const [emailSent, setEmailSent] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const data = { name, email, subject, message }
-    axios.post('/send', data)
+    axios.post('https://dttc-api.herokuapp.com/email', data)
       .then(response => {
-        console.log('Success:', response.data)
+        setName('')
+        setEmail('')
+        setSubject('')
+        setMessage('')
+        setEmailSent(true)
+        setTimeout(() => {
+          setEmailSent(false)
+        }, 3000)
       })
       .catch(error => {
         console.error('Error:', error)
@@ -24,7 +32,7 @@ export default function ContactForm() {
     <div className='contact-page'>
       <div className='form-container'>
       <form onSubmit={handleSubmit}>
-        <h2>Interested in booking us?</h2>
+        <h2>{emailSent ? 'Your email has been sent!' : 'Interested in booking us?'}</h2>
         <label>
          Name:
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} />

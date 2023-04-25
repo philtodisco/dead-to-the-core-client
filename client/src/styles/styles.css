@@ -9,7 +9,7 @@
 }
 
 :root {
-	--mainColor: #EEEDEB;
+	--mainColor: #abe7f0;
 	--mainColorLight: #5767aa;
 	--secondaryColor: #A83F32;
 	--textColor: #131617;
@@ -251,7 +251,7 @@ nav {
 /* Contact */
 
 .contact-page {
-    margin-top: 5rem;
+    margin-top: 2.5rem;
   }
   
  form > h2 {
@@ -313,4 +313,9 @@ nav {
   #submit-btn:hover {
     opacity: 50%;
   }
+
+  /* gallery */
+
+  
+
   
