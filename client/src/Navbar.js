@@ -30,7 +30,8 @@ export const Navbar = () => {
         {showLink && <Link to ="/" onClick={closeNavBar}>Home</Link>}
         <Link to ="/band" onClick={closeNavBar}>Band</Link>
         <Link to ="/tour" onClick={closeNavBar}>Tour</Link>
-        <Link to ="/gallery" onClick={closeNavBar}>Gallery</Link>
+        {/* <Link to ="/gallery" onClick={closeNavBar}>Gallery</Link> */}
+        <Link to ="/watch" onClick={closeNavBar}>Watch</Link>
         <Link to ="/contact" onClick={closeNavBar}>Contact</Link>
         {/* Button to open to the responsive nav */}
 				<button
