@@ -32,7 +32,7 @@ export default function ContactForm() {
     <div className='contact-page'>
       <div className='form-container'>
       <form onSubmit={handleSubmit}>
-        <h2>{emailSent ? 'Your email has been sent!' : 'Interested in booking us?'}</h2>
+        <h1>{emailSent ? 'Your email has been sent!' : 'Interested in booking us?'}</h1>
         <label>
          Name:
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} required/>

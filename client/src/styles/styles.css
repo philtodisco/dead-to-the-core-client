@@ -215,6 +215,8 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    padding-top: 0;
+    margin-top: 2.5rem;
 }
 
 .tour-date-container {
@@ -254,11 +256,7 @@ nav {
     margin-top: 2.5rem;
   }
   
- form > h2 {
-    font-size: 2.5rem;
-    flex: 1;
-    display: flex;
-    justify-content: center;
+ form > h1 {
     margin-bottom: 30px;
   }
   
@@ -343,6 +341,21 @@ nav {
   #band-photo-1 {
     max-width: 50rem;
     width: 50vw;
+  }
+
+  /* Watch */
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+  }
+
+  .live-video {
+    max-width: 100%;
+    max-height: 100%;
+    
   }
 
 
