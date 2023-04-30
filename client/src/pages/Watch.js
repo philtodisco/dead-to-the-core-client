@@ -8,7 +8,8 @@ export default function Watch() {
     return <div className='watch-page'>
       <div className='video-container'>
         <YouTube videoId={videoId} className='live-video'/>
+        <YouTube videoId={videoId} className='live-video'/>
+        <YouTube videoId={videoId} className='live-video'/>
       </div>
     </div>
-  
   }

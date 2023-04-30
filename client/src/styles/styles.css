@@ -58,6 +58,12 @@ nav a:hover {
 	opacity: 50%;
 }
 
+.selected {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+
 header .nav-btn {
 	padding: 5px;
 	cursor: pointer;
@@ -347,15 +353,16 @@ nav {
 
 .video-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 5rem;
   }
 
-  .live-video {
-    max-width: 100%;
-    max-height: 100%;
-    
+  iframe {
+    height: 30vw;
+    width: 50vw;
+    margin-bottom: 5rem;
   }
 
 
