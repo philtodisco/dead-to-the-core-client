@@ -349,6 +349,38 @@ nav {
     width: 50vw;
   }
 
+  @media only screen and (max-width: 1200px) {
+    
+    .band-page {
+      flex-direction: column;
+      margin: 0;
+      margin-bottom: 5rem;
+    }
+
+    .band-page-text-container {
+      width: 75vw;
+      margin-right: 0;
+      margin-bottom: 2.5rem;
+    }
+
+    .band-page-text-container > h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      padding-bottom: 2rem;
+    }
+
+    .band-page-text-container > p {
+      text-align: center;
+    }
+
+    #band-photo-1 {
+      width: 50vw;
+      min-width: 20rem;
+      margin: 0rem 2.5rem;
+    }
+
+  }
+
   /* Watch */
 
 .video-container {
