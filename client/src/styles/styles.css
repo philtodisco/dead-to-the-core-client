@@ -1,11 +1,11 @@
 * {
   padding: 0;
-margin: 0;
-box-sizing: border-box;
-font-family: "minion-pro", serif;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "minion-pro", serif;
   font-weight: 700;
   font-style: normal;
-  background-color: var(--mainColor);
+  background-color: var(--mainColor); 
 }
 
 :root {
@@ -153,6 +153,14 @@ header nav {
 
 header .responsive_nav {
   transform: translateY(100vh);
+}
+
+.nav-links {
+  flex-direction: column;
+}
+
+.responsive_nav {
+  flex-direction: column-reverse;
 }
 
   .site-title {

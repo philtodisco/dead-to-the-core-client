@@ -31,12 +31,19 @@ export const Navbar = () => {
 			<Link to ="/" className="site-title">Dead To The Core</Link>
       {/* Show mobile responive nav only when showNavBar state is true*/}
 			<nav className={`nav ${showNavBar && "responsive_nav"}`}>
+        <div className="social-icons">
+        <Link to ="https://www.instagram.com/deadtothec0re/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></Link>
+        <Link to ="https://www.facebook.com/profile.php?id=100070371124362" target="_blank"><i class="fa-brands fa-facebook"></i></Link>
+        <Link to ="https://www.youtube.com/channel/UCuYNA-6GJwz85fLj7iAYYbQ" target="_blank"><i class="fa-brands fa-youtube"></i></Link>
+        </div>
+        <div className="nav-links">
         {/* Show the "Home" link only when the showLink state is true */}
         {showLink && <Link to ="/" onClick={closeNavBar} className={pathname === '/' && 'selected'}>Home</Link>}
         <Link to ="/band" onClick={closeNavBar} className={pathname === '/band' && 'selected'}>Band</Link>
         <Link to ="/tour" onClick={closeNavBar} className={pathname === '/tour' && 'selected'}>Tour</Link>
         {/* <Link to ="/watch" onClick={closeNavBar} className={pathname === '/watch' && 'selected'}>Watch</Link> */}
         <Link to ="/contact" onClick={closeNavBar} className={pathname === '/contact' && 'selected'}>Contact</Link>
+        </div>
         {/* Button to open to the responsive nav */}
 				<button
 					className="nav-btn nav-close-btn"

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 
@@ -31,8 +32,8 @@ const TourDateTable = () => {
           <p id='date'>{tourDate.date}</p>
           <p>{tourDate.city}, {tourDate.state}</p>
           <p>{tourDate.venue}</p>
-          <a className='tour-links' href={tourDate.rsvp}>RSVP</a>
-          <a className='tour-links' href={tourDate.ticket}>Tickets</a>
+          <a className='tour-links' href={tourDate.rsvp} target="_blank">RSVP</a>
+          <a className='tour-links' href={tourDate.ticket} target="_blank">Tickets</a>
         </div>
       ))}
     </div>
