@@ -15,15 +15,6 @@ font-family: "minion-pro", serif;
 --textColor: #131617;
 }
 
-/* Woodsmoke
-#131617
-Brandy Rose
-#B78E75
-Breaker Bay
-#6398A7
-Waikawa Gray
-#5A7998  */
-
 header {
 display: flex;
 align-items: center;
@@ -220,6 +211,7 @@ nav a {
   justify-content: center;
   align-items: center;
   margin-top: 2.5rem;
+  margin-bottom: 5rem;
 }
 
 .tour-date-page > h1 {
@@ -252,6 +244,58 @@ nav a {
 
 .tour-links:hover {
   opacity: 50%;
+}
+
+@media only screen and (max-width: 850px) {
+  .tour-date-container {
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1rem;
+  }
+  
+  .tour-date-container > * {
+    font-size: 1.5rem;
+  }
+  
+  .tour-date-container #date {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    align-self: center;
+  }
+  
+  .tour-date-container p:nth-of-type(2) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    align-self: center;
+  }
+  
+  .tour-date-container p:nth-of-type(3) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    align-self: center;
+  }
+  
+  .tour-date-container a:nth-of-type(1) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-self: center;
+  }
+  
+  .tour-date-container a:nth-of-type(2) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    align-self: center;
+  }
 }
 
 /* Contact */
@@ -315,6 +359,9 @@ textarea {
 #submit-btn:hover {
   opacity: 50%;
 }
+
+
+
 
 @media only screen and (max-width: 705px) {
 
