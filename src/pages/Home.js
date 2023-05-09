@@ -1,4 +1,4 @@
-import Hero from "/dead-to-the-core-client/images/hero-image.png"
+import Hero from "../images/hero-image.png"
 import { Link } from "react-router-dom"
 
 
