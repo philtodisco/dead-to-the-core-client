@@ -1,38 +1,22 @@
-# DTTC
-A website for my band Dead To The Core that uses node.js and react.js
+**Dead To The Core Band Website**
 
-Font Reference:
+This is a website for my band Dead To The Core. The website allows you to view our tour dates and additional info such as location, ticket links, date, etc, which is fetched from an API that I built ([API Repo](https://github.com/philtodisco/DTTC-api)). In addition to the tour dates, users can send us an email via our contact form which is also powered by the backend that I built. Users are also able to navaigate to an "about" page to learn more about the band, and navigate to our social media websites. Lastly, a mobile version is activated using media queries making the website fully responsive across all devices.
 
-Minion Pro Regular
-font-family: "minion-pro", serif;
-font-weight: 400;
-font-style: normal;
-Minion Pro Italic
-font-family: "minion-pro", serif;
-font-weight: 400;
-font-style: italic;
-Minion Pro Bold
-font-family: "minion-pro", serif;
-font-weight: 700;
-font-style: normal;
-Minion Pro Bold Italic
-font-family: "minion-pro", serif;
-font-weight: 700;
-font-style: italic;
+**Upcoming Features/Improvements**
 
-Nimbus Sans Regular
-font-family: "nimbus-sans", sans-serif;
-font-weight: 400;
-font-style: normal;
-Nimbus Sans Regular Italic
-font-family: "nimbus-sans", sans-serif;
-font-weight: 400;
-font-style: italic;
-Nimbus Sans Bold
-font-family: "nimbus-sans", sans-serif;
-font-weight: 700;
-font-style: normal;
-Nimbus Sans Bold Italic
-font-family: "nimbus-sans", sans-serif;
-font-weight: 700;
-font-style: italic;
+* Online store
+* Gallery for photos and video
+* Individual CSS files for each page
+
+**Here are the links to my deployed site and my reposository:**
+
+* [Repo](https://github.com/philtodisco/DTTC)
+* [Live Site](deadtothecore.org)
+
+**Tech Used:**
+
+* Javascript
+* React
+* Axios
+* HTML
+* CSS
