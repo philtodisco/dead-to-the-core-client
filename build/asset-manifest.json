@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dead-to-the-core-client/static/css/main.fb324e07.css",
-    "main.js": "/dead-to-the-core-client/static/js/main.81daaa95.js",
-    "static/media/band1.jpg": "/dead-to-the-core-client/static/media/band1.81a39509076deb9a57f9.jpg",
-    "static/media/hero-image.png": "/dead-to-the-core-client/static/media/hero-image.b4c852855eaecc69c09a.png",
-    "index.html": "/dead-to-the-core-client/index.html",
-    "main.fb324e07.css.map": "/dead-to-the-core-client/static/css/main.fb324e07.css.map",
-    "main.81daaa95.js.map": "/dead-to-the-core-client/static/js/main.81daaa95.js.map"
+    "main.css": "/deadtothecore.org/static/css/main.fb324e07.css",
+    "main.js": "/deadtothecore.org/static/js/main.0e0f2f0b.js",
+    "static/media/band1.jpg": "/deadtothecore.org/static/media/band1.81a39509076deb9a57f9.jpg",
+    "static/media/hero-image.png": "/deadtothecore.org/static/media/hero-image.b4c852855eaecc69c09a.png",
+    "index.html": "/deadtothecore.org/index.html",
+    "main.fb324e07.css.map": "/deadtothecore.org/static/css/main.fb324e07.css.map",
+    "main.0e0f2f0b.js.map": "/deadtothecore.org/static/js/main.0e0f2f0b.js.map"
   },
   "entrypoints": [
     "static/css/main.fb324e07.css",
-    "static/js/main.81daaa95.js"
+    "static/js/main.0e0f2f0b.js"
   ]
 }
