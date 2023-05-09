@@ -1,6 +1,0 @@
-# exclude the .env file
-.env
-
-# other files to ignore
-# node_modules/
-# build/
