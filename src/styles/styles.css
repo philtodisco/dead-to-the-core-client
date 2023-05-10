@@ -162,6 +162,7 @@ header .responsive_nav {
 
 .responsive_nav {
   flex-direction: column-reverse;
+  z-index: 1;
 }
 
   .site-title {
