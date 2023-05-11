@@ -18,6 +18,7 @@ const TourDateTable = () => {
           date: formattedDate
         }
       })
+      formattedTourDates.sort((a, b) => new Date(a.date) - new Date(b.date)); // sort by date
       setTourDateData(formattedTourDates)
     })
     .catch(err => {
@@ -27,11 +28,14 @@ const TourDateTable = () => {
   ,[])
 
   const emptyLinkHandler = (event) => {
-    const href = event.currentTarget.href;
-    console.log(href); // This will log the href of the clicked ticket-link element to the console
+    const href = event.currentTarget.href
+    const innerText = event.currentTarget.innerText
+    console.log(innerText)
     if (href === window.location.href) {
       event.preventDefault()
-      alert('Link Not Available')
+      if (innerText === "Tickets") {
+        alert('Tickets are unavailable for this event')
+      } else alert('RSVP page is unavailable for this event')
     }
   }
 
@@ -44,7 +48,7 @@ const TourDateTable = () => {
           <p>{tourDate.city}, {tourDate.state}</p>
           <p>{tourDate.venue}</p>
           <a className='tour-links' href={tourDate.rsvp} target="_blank" onClick={emptyLinkHandler}>RSVP</a>
-          <a className='tour-links' href={tourDate.ticket} target="_blank" onClick={emptyLinkHandler}>{tourDate.ticket ? 'Tickets' : 'Free Show'}</a>
+          <a className='tour-links' href={tourDate.ticket} target="_blank" onClick={emptyLinkHandler}>Tickets</a>
         </div>
       ))}
     </div>
