@@ -26,6 +26,19 @@ const TourDateTable = () => {
     })
   }
   ,[])
+  
+  
+  // const emptyLinkHandler = (event) => {
+  //   const href = event.currentTarget.href
+  //   const innerText = event.currentTarget.innerText
+  //   console.log(innerText)
+  //   if (href === window.location.href) {
+  //     event.preventDefault()
+  //     if (innerText === "Tickets") {
+  //       alert('Tickets are unavailable for this event')
+  //     } else alert('RSVP page is unavailable for this event')
+  //   }
+  // }
 
   const emptyLinkHandler = (event) => {
     const href = event.currentTarget.href
@@ -33,22 +46,19 @@ const TourDateTable = () => {
     console.log(innerText)
     if (href === window.location.href) {
       event.preventDefault()
-      if (innerText === "Tickets") {
-        alert('Tickets are unavailable for this event')
-      } else alert('RSVP page is unavailable for this event')
     }
   }
 
   // Return some JSX that uses tourDateData
   return (
     <div>
-      {tourDateData.map(tourDate => (
+      {tourDateData.map(tourDate => ( 
         <div className='tour-date-container'>
           <p id='date'>{tourDate.date}</p>
           <p>{tourDate.city}, {tourDate.state}</p>
           <p>{tourDate.venue}</p>
-          <a className='tour-links' href={tourDate.rsvp} target="_blank" onClick={emptyLinkHandler}>RSVP</a>
-          <a className='tour-links' href={tourDate.ticket} target="_blank" onClick={emptyLinkHandler}>Tickets</a>
+          <a className={`tour-links ${tourDate.rsvp === "" && 'is-empty'}`} href={tourDate.rsvp} target="_blank" onClick={emptyLinkHandler}>RSVP</a>
+          <a className={`tour-links ${tourDate.ticket === "" && 'is-empty'}`} href={tourDate.ticket} target="_blank" onClick={emptyLinkHandler}>Tickets</a>
         </div>
       ))}
     </div>

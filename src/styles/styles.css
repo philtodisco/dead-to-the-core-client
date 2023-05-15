@@ -245,6 +245,15 @@ nav a {
   transition-duration: 0.4s;
 }
 
+.tour-links.is-empty {
+  opacity: 20%;
+  cursor: default;
+}
+
+.tour-links.is-empty:hover {
+  opacity: 20%;
+}
+
 .tour-date-container > * {
   align-self: center;
   justify-content: center;
