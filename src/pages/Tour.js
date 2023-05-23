@@ -9,8 +9,16 @@ const TourDateTable = () => {
     axios.get('https://dttc-api.herokuapp.com/tourDates', {
     })
     .then(res => {
+      const currentDate = new Date();
+    
+        // Filter out past dates
+        const upcomingTourDates = res.data.filter(tourDate => {
+          const date = new Date(tourDate.date);
+          return date >= currentDate;
+        });
+
       // Format the date field of each tour date object
-      const formattedTourDates = res.data.map(tourDate => {
+      const formattedTourDates = upcomingTourDates.map(tourDate => {
         const date = new Date(tourDate.date);
         const formattedDate = date.toLocaleDateString('en-US', { timeZone: 'UTC', month: '2-digit', day: '2-digit', year: 'numeric' })
         return {
@@ -27,19 +35,6 @@ const TourDateTable = () => {
   }
   ,[])
   
-  
-  // const emptyLinkHandler = (event) => {
-  //   const href = event.currentTarget.href
-  //   const innerText = event.currentTarget.innerText
-  //   console.log(innerText)
-  //   if (href === window.location.href) {
-  //     event.preventDefault()
-  //     if (innerText === "Tickets") {
-  //       alert('Tickets are unavailable for this event')
-  //     } else alert('RSVP page is unavailable for this event')
-  //   }
-  // }
-
   const emptyLinkHandler = (event) => {
     const href = event.currentTarget.href
     const innerText = event.currentTarget.innerText
