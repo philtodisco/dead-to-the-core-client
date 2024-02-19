@@ -18,7 +18,7 @@ export default function App() {
       <Route path = "/tour" element = {<Tour />} />
       {/* <Route path = "/watch" element = {<Watch />} /> */}
       <Route path = "/contact" element = {<Contact />} />
-      <Route path = "shop" element = {<Shop />} />
+      {/* <Route path = "shop" element = {<Shop />} /> */}
     </Routes>
   </>
   )
