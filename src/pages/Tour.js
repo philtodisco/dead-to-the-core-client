@@ -1,73 +1,110 @@
-/* eslint-disable react/jsx-no-target-blank */
-import axios from 'axios'
-import React, { useState, useEffect } from 'react'
-
-const TourDateTable = () => {
-  const [tourDateData, setTourDateData] = useState([])
-
-  useEffect(() => {
-    axios.get('https://dttc-api.herokuapp.com/tourDates', {
-    })
-    .then(res => {
-      const currentDate = new Date();
-    
-        // Filter out past dates
-        const upcomingTourDates = res.data.filter(tourDate => {
-          const date = new Date(tourDate.date);
-          return date >= currentDate;
-        });
-
-      // Format the date field of each tour date object
-      const formattedTourDates = upcomingTourDates.map(tourDate => {
-        const date = new Date(tourDate.date);
-        const formattedDate = date.toLocaleDateString('en-US', { timeZone: 'UTC', month: '2-digit', day: '2-digit', year: 'numeric' })
-        return {
-          ...tourDate,
-          date: formattedDate
-        }
-      })
-      formattedTourDates.sort((a, b) => new Date(a.date) - new Date(b.date)); // sort by date
-      setTourDateData(formattedTourDates)
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  }
-  ,[])
-  
-  const emptyLinkHandler = (event) => {
-    const href = event.currentTarget.href
-    const innerText = event.currentTarget.innerText
-    console.log(innerText)
-    if (href === window.location.href) {
-      event.preventDefault()
-    }
-  }
-
-  // Return some JSX that uses tourDateData
-  return (
-    <div>
-      {tourDateData.map(tourDate => ( 
-        <div className='tour-date-container'>
-          <p id='date'>{tourDate.date}</p>
-          <p>{tourDate.city}, {tourDate.state}</p>
-          <p>{tourDate.venue}</p>
-          <a className={`tour-links ${tourDate.rsvp === "" && 'is-empty'}`} href={tourDate.rsvp} target="_blank" onClick={emptyLinkHandler}>RSVP</a>
-          <a className={`tour-links ${tourDate.ticket === "" && 'is-empty'}`} href={tourDate.ticket} target="_blank" onClick={emptyLinkHandler}>Tickets</a>
-        </div>
-      ))}
-    </div>
-  )
-}
+import React, { useEffect } from 'react'
 
 export default function Tour() {
-  // Use TourDateTable component
+  useEffect(() => {
+    // Load Bandsintown widget script
+    const script = document.createElement('script')
+    script.src = 'https://widgetv3.bandsintown.com/main.min.js'
+    script.charset = 'utf-8'
+    script.async = true
+    document.body.appendChild(script)
+
+    return () => {
+      // Cleanup script on unmount
+      document.body.removeChild(script)
+    }
+  }, [])
+
   return (
-    <React.Fragment>
     <div className='tour-date-page'>
       <h1 className='page-title'>TOUR DATES</h1>
-      <TourDateTable />
+      <a
+        className="bit-widget-initializer"
+        data-artist-name="id_15626353"
+        data-events-to-display=""
+        data-background-color="rgba(238,237,235,1)"
+        data-separator-color="rgba(221,221,221,1)"
+        data-text-color="rgba(13,16,17,1)"
+        data-font="minion-pro"
+        data-auto-style="true"
+        data-button-label-capitalization="uppercase"
+        data-header-capitalization="uppercase"
+        data-location-capitalization="uppercase"
+        data-venue-capitalization="uppercase"
+        data-display-local-dates="true"
+        data-local-dates-position="tab"
+        data-display-past-dates="true"
+        data-display-details="false"
+        data-display-lineup="false"
+        data-display-start-time="false"
+        data-social-share-icon="false"
+        data-display-limit="all"
+        data-date-format="MMM. D, YYYY"
+        data-date-orientation="horizontal"
+        data-date-border-color="#4A4A4A"
+        data-date-border-width="1px"
+        data-date-capitalization="capitalize"
+        data-date-border-radius="10px"
+        data-event-ticket-cta-size="large"
+        data-event-custom-ticket-text=""
+        data-event-ticket-text="BUY TICKETS"
+        data-event-ticket-icon="false"
+        data-event-ticket-cta-text-color="rgba(255,255,255,1)"
+        data-event-ticket-cta-bg-color="rgba(13,16,17,1)"
+        data-event-ticket-cta-border-color="rgba(13,16,17,1)"
+        data-event-ticket-cta-border-width="0px"
+        data-event-ticket-cta-border-radius="2px"
+        data-sold-out-button-text-color="rgba(255,255,255,1)"
+        data-sold-out-button-background-color="rgba(13,16,17,1)"
+        data-sold-out-button-border-color="rgba(13,16,17,1)"
+        data-sold-out-button-clickable="true"
+        data-event-rsvp-position="hidden"
+        data-event-rsvp-cta-size="medium"
+        data-event-rsvp-only-show-icon="false"
+        data-event-rsvp-text="RSVP"
+        data-event-rsvp-icon="false"
+        data-event-rsvp-cta-text-color="rgba(74,74,74,1)"
+        data-event-rsvp-cta-bg-color="rgba(255,255,255,1)"
+        data-event-rsvp-cta-border-color="rgba(74,74,74,1)"
+        data-event-rsvp-cta-border-width="1px"
+        data-event-rsvp-cta-border-radius="2px"
+        data-follow-section-position="bottom"
+        data-follow-section-alignment="center"
+        data-follow-section-header-text="Get updates on new shows, new music, and more"
+        data-follow-section-cta-size="medium"
+        data-follow-section-cta-text="FOLLOW"
+        data-follow-section-cta-icon="false"
+        data-follow-section-cta-text-color="rgba(255,255,255,1)"
+        data-follow-section-cta-bg-color="rgba(13,16,17,1)"
+        data-follow-section-cta-border-color="rgba(13,16,17,1)"
+        data-follow-section-cta-border-width="0px"
+        data-follow-section-cta-border-radius="2px"
+        data-play-my-city-position="hidden"
+        data-play-my-city-alignment="center"
+        data-play-my-city-header-text="Don't see a show near you?"
+        data-play-my-city-cta-size="medium"
+        data-play-my-city-cta-text="REQUEST A SHOW"
+        data-play-my-city-cta-icon="false"
+        data-play-my-city-cta-text-color="rgba(255,255,255,1)"
+        data-play-my-city-cta-bg-color="rgba(74,74,74,1)"
+        data-play-my-city-cta-border-color="rgba(74,74,74,1)"
+        data-play-my-city-cta-border-width="0px"
+        data-play-my-city-cta-border-radius="2px"
+        data-optin-font=""
+        data-optin-text-color=""
+        data-optin-bg-color=""
+        data-optin-cta-text-color=""
+        data-optin-cta-bg-color=""
+        data-optin-cta-border-width=""
+        data-optin-cta-border-radius=""
+        data-optin-cta-border-color=""
+        data-language="en"
+        data-layout-breakpoint="900"
+        data-app-id="688be2d2d72898f68e092e241130c5a3"
+        data-affil-code=""
+        data-bit-logo-position="bottomRight"
+        data-bit-logo-color="rgba(13,16,17,1)"
+      ></a>
     </div>
-    </React.Fragment>
   )
 }

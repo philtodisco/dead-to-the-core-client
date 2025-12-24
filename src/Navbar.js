@@ -42,7 +42,7 @@ export const Navbar = () => {
         <Link to ="/band" onClick={closeNavBar} className={pathname === '/band' && 'selected'}>Band</Link>
         <Link to ="/tour" onClick={closeNavBar} className={pathname === '/tour' && 'selected'}>Tour</Link>
         {/* <Link to ="/watch" onClick={closeNavBar} className={pathname === '/watch' && 'selected'}>Watch</Link> */}
-        <Link to ="/contact" onClick={closeNavBar} className={pathname === '/contact' && 'selected'}>Contact</Link>
+        {/* <Link to ="/contact" onClick={closeNavBar} className={pathname === '/contact' && 'selected'}>Contact</Link> */}
         {/* <Link to ="/shop" onClick={closeNavBar} className={pathname === '/shop' && 'selected'}>Shop</Link> */}
         </div>
         {/* Button to open to the responsive nav */}
