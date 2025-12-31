@@ -13,6 +13,7 @@ export default function ContactForm() {
 
     const formData = new URLSearchParams();
     formData.append('form-name', 'contact');
+    formData.append('bot-field', '');
     formData.append('name', name);
     formData.append('email', email);
     formData.append('subject', subject);
