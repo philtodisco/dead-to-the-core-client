@@ -4,7 +4,7 @@ import Band from './pages/Band'
 import Tour from './pages/Tour'
 // import Watch from './pages/Watch'
 import Contact from './pages/Contact'
-import Shop from './pages/Shop'
+// import Shop from './pages/Shop'
 import { Navbar } from './Navbar'
 import { Route, Routes } from "react-router-dom"
 

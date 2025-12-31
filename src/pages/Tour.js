@@ -18,7 +18,10 @@ export default function Tour() {
   return (
     <div className='tour-date-page'>
       <h1 className='page-title'>TOUR DATES</h1>
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid, jsx-a11y/anchor-has-content */}
       <a
+        href="#tour-dates"
+        aria-label="Bandsintown tour dates widget"
         className="bit-widget-initializer"
         data-artist-name="id_15626353"
         data-events-to-display=""
